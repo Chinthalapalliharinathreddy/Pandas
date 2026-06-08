@@ -1,0 +1,49 @@
+#Creating a series
+import pandas as pd
+
+students = pd.Series(["Hari", "Ram", "Alex"])
+
+print(students)
+
+#Creating a  number series with index
+import pandas as pd
+marks = pd.Series([85, 90, 95])
+print(marks)
+print(marks[0])
+print(marks[2])
+
+#Creating a series with own index
+import pandas as pd
+students=pd.Series(["Hari", "Ram", "Alex"], index=["s1", "s2", "s3"])
+print(students)
+print(students["s1"])
+print(students["s3"])
+
+#Series Attributes
+print(students.values)
+print(students.shape)
+print(students.dtype)
+print(students.ndim)
+print(students.size)
+
+#Series mathematical operations
+import pandas as pd
+marks = pd.Series([85, 90, 95])
+print(marks+10)
+
+print(marks.sum())
+print(marks.min())
+print(marks.max())
+print(marks.mean())
+print(marks.median())
+print(marks.std())
+
+#Filtering a series
+print(marks[marks > 90])
+print(marks>60)
+
+#Converting a series to a list
+import pandas as pd
+students = pd.Series(["Hari", "Ram", "Alex"])
+students_list = students.tolist()
+print(students_list)
