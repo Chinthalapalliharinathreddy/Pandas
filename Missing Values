@@ -1,0 +1,17 @@
+import pandas as pd
+import numpy as np
+
+df=pd.DataFrame({
+    "Name": ["Hari", "Ram", "Alex"],
+    "Age": [21, np.nan, 23],
+    "Marks":[np.nan,93,80]
+})
+print(df.fillna(0))
+print(df.fillna(method="ffill"))
+print(df.fillna(method="bfill"))
+print(df.notnull())
+print(df.isnull())
+print(df.dropna())
+print(df.dropna(axis=1))
+print(df.head(2))
+print(df.tail(1))
